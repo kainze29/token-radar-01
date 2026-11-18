@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Token Radar: pre-token DeFi ranked by implied launch value</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><span class="dot"></span><div><h1>TOKEN RADAR</h1><p>Pre-token DeFi, ranked by implied launch value</p></div></div>
+  <div class="meta"><span id="asof"></span><span id="model"></span></div>
+</header>
+<main>
+  <section class="stats" id="stats"></section>
+  <section class="spot" id="spot"></section>
+  <section class="toolbar">
+    <input id="q" type="search" placeholder="Search a protocol..." autocomplete="off">
+    <select id="chain" aria-label="Chain"></select>
+    <div class="tabs"><button data-tab="pre" class="on">Pre-token radar</button><button data-tab="live">Live tokens</button></div>
+    <select id="sort" aria-label="Sort by">
+      <option value="rank">Sort: rank</option>
+      <option value="tvl">Sort: TVL</option>
+      <option value="growth">Sort: 7d growth</option>
+      <option value="age">Sort: age</option>
+    </select>
+  </section>
+  <section class="chips" id="chips"></section>
+  <div class="count" id="count"></div>
+  <table id="board">
+    <thead id="thead"></thead>
+    <tbody id="rows"></tbody>
+  </table>
+  <section class="model" id="modelsec"></section>
+</main>
+<aside class="drawer" id="drawer"></aside>
+<script src="../data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
